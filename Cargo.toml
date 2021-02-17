@@ -1,0 +1,9 @@
+[package]
+name = "redbox"
+version = "0.0.1"
+description = "A Redis server"
+repository = "https://github.com/arniu/redbox"
+homepage = "https://github.com/arniu/redbox"
+license = "MIT OR Apache-2.0"
+authors = ["Arniu Tseng"]
+edition = "2018"
