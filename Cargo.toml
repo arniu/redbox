@@ -7,3 +7,8 @@ homepage = "https://github.com/arniu/redbox"
 license = "MIT OR Apache-2.0"
 authors = ["Arniu Tseng"]
 edition = "2018"
+
+default-run = "redbox-server"
+
+[dependencies]
+tokio = { version = "1.2", features = ["full"] }
