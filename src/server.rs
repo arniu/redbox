@@ -9,9 +9,12 @@ pub async fn run(addr: &str) -> io::Result<()> {
 
     println!("Redbox started at {}", addr);
     while let Ok((stream, addr)) = listener.accept().await {
-        println!("Accept from {}", addr);
-        process(stream).await?;
+        tokio::spawn(async move {
+            println!("Accept from {}", addr);
+            process(stream).await
+        });
     }
+
     println!("Redbox stopped");
 
     Ok(())
